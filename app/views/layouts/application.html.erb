@@ -4,20 +4,22 @@
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag "application", media: "all",
                                    "data-turbolinks-track" => true %>
-    <%# <%= java_include_tag "application", 'data-turbolinks-track' => true %>
+     <%# <%= java_include_tag "application", 'data-turbolinks-track' => true %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= 'render layouts/shim'%>
+    <%= render "layouts/shim" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload"%>
   </head>
   <body>
-   <%= 'render layouts/header' %>
+
+
+    <%= render "layouts/header" %>
     <div class="container">
       <%= yield %>
-      <% 'render layouts/footer' %>
+      <%= render "layouts/footer" %>
+
     </div>
   </body>
 </html>
