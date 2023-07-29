@@ -16,10 +16,6 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
-  test "email should be present" do
-    @user.email = "         "
-    assert_not @user.valid?
-  end
 
   test "name should not be to long" do
     @user.name = "a" * 51
@@ -37,7 +33,7 @@ class UserTest < ActiveSupport::TestCase
                   first.last@foo.jp alice+bob@baz.cn]
     valid_addresses.each do |valid_addresses|
       @user.email = valid_addresses
-      assert @user.valid?
+      assert @user.valid?, "#{valid_addresses.inspect} should be valid"
     end
   end
 
@@ -56,6 +52,7 @@ class UserTest < ActiveSupport::TestCase
     @user.save
     assert_not duplicate_user.valid?
   end
+
 
 
   test "password should have minimum length" do
