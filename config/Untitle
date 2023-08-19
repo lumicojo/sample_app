@@ -1,0 +1,7 @@
+edit_account_activation_url(activation_token,...)
+
+edit_user_url(@user)
+
+user_activation_token
+
+if user.activated?

@@ -1,0 +1,10 @@
+edit_user_url(@user)-> http://www.example.com/users/1/edit
+
+edit_account_activation_url(@user.activation_token,
+http://www.example.com/edit_account_activation/oD2MnYdqeQ2cJq92pWLl4w/edit?email=foo%40example.com)
+
+http://localhost:3000/account_activations/mwD6dLXWAULHqSFf9pSl-w/edit?email=example%40railstutorial.org
+
+http://localhost:3000/account_activations/lToTexKriBCoEKZzACEYxA/edit?email=example%40railstutorial.org
+
+
